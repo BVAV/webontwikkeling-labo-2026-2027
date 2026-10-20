@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>News</title>
+  </head>
+  <body>
+    <%- include("partials/header") %>
+
+    <!-- render the articles with for loop -->
+    <main>
+    
+        <ul>
+            <% for(let i=0; i<articles.length; i++) {%>
+                <article>
+                    <header><h2><%= articles[i].title %></h2></header>
+                    <p><%= articles[i].content %></p>
+                </article>
+            <% } %>
+        </ul>
+    </main>
+
+    <%- include("partials/footer") %>
+  </body>
+</html>
